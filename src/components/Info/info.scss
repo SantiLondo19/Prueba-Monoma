@@ -1,0 +1,103 @@
+@use "../../styles/base/variables" as v;
+@use "../../styles/base/mixins" as m;
+
+.informacion-casa {
+  .producto {
+    &__descripcion {
+      line-height: 1.2;
+      color: v.$gris-oscuro;
+    }
+  }
+}
+
+.informaciones {
+  &__precios {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .informaciones__precio--naranjado {
+    color: v.$naranja;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+    margin: 1rem 1rem 0 0;
+    font-weight: 700;
+    @include m.tablet {
+      font-size: 4.2rem;
+      margin: 0.5rem auto;
+    }
+  }
+  &__referencia {
+    text-align: end;
+    margin: 0 1rem;
+    line-height: 1;
+    font-size: 1.2rem;
+  }
+  &__favoritos {
+    height: 4rem;
+    width: 5rem;
+  }
+  &__corazon {
+    width: 4rem;
+
+    @include m.tablet {
+      margin-left: 2rem;
+    }
+  }
+  &__boton {
+    margin: 0;
+    border: none;
+    background: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.caracteristicas,
+.extras {
+  &__titulo {
+    font-weight: 700;
+    text-align: left;
+    color: v.$gris-oscuro;
+    margin: 3rem 0 0 0;
+    line-height: 0;
+  }
+  &__lista {
+    color: v.$negro;
+    font-weight: 400;
+  }
+}
+
+.caracteristicas-flex {
+  @include m.tablet {
+    gap: 6rem;
+    display: flex;
+    margin-bottom: 3rem;
+  }
+}
+.mapa {
+  width: auto;
+  object-fit: cover;
+}
+
+.footer {
+  @include m.tablet {
+    @include m.grid(2, 3rem);
+  }
+}
+.footer-title {
+  margin-top: 5rem;
+
+  text-align: left;
+  color: v.$gris-oscuro;
+}
+
+.footer__texto {
+  color: v.$gris-oscuro;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-align: center;
+  margin: 3rem 0;
+}
